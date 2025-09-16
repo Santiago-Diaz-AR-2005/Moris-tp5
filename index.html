@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Administración</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+  <div id="login-container">
+    <h2>Iniciar Sesión</h2>
+    <form id="login-form">
+      <input type="text" id="username" placeholder="Usuario" required>
+      <input type="password" id="password" placeholder="Contraseña" required>
+      <button type="submit">Ingresar</button>
+      <p id="error-message"></p>
+    </form>
+  </div>
+
+ 
+  <div id="app" class="hidden">
+
+    <nav class="menu">
+      <ul>
+        <li>
+          <a href="#">Ventas</a>
+          <ul class="submenu">
+            <li onclick="mostrarContenido('nuevaVenta')">Nueva venta</li>
+            <li onclick="mostrarContenido('historialVentas')">Historial</li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Stock</a>
+          <ul class="submenu">
+            <li onclick="mostrarContenido('productos')">Productos</li>
+            <li onclick="mostrarContenido('ingresarProducto')">Ingresar producto</li>
+            <li onclick="mostrarContenido('reportesStock')">Reportes</li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Caja</a>
+          <ul class="submenu">
+            <li onclick="mostrarContenido('aperturaCaja')">Apertura</li>
+            <li onclick="mostrarContenido('cierreCaja')">Cierre</li>
+            <li onclick="mostrarContenido('movimientosCaja')">Movimientos</li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    
+    <div id="contenido">
+      <h2>Bienvenido al sistema</h2>
+      <p>Selecciona una opción del menú para comenzar.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
